@@ -20,7 +20,8 @@ const app = new Vue({
         },
 
         removeTarea(index) {
-            this.tareas.
+            this.tareas.splice(index, 1);
+            
         }
 
 
