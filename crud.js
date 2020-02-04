@@ -17,8 +17,13 @@ const app = new Vue({
 
         editTarea(index) {
             this.tareas[index].estado = true;
+        },
 
+        removeTarea(index) {
+            this.tareas.
         }
+
+
 
         
         
