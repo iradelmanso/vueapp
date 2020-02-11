@@ -3,39 +3,62 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        
+        
     </head>
     <body>
-        <div class="container mt-5" id="app">
-            <form>                
-                <div class="form-group">
-                  <label for="office">Office</label>
-                  <input type="text" class="form-control" id="office" v-model="office">                  
-                </div>
+        <div class="container mt-5" id="app">                        
+            
+            <div class="form-group">
+                <label for="office">Office</label>
+                <input type="text" class="form-control" id="office" v-model="office">                  
+            </div>
 
-                <div class="form-group">
-                    <label for="businessUnit">Business Unit</label>
-                    <input type="text" class="form-control" id="businessUnit" v-model="businessUnit">                  
-                </div>
+            <div class="form-group">
+                <label for="businessUnit">Business Unit</label>
+                <input type="text" class="form-control" id="businessUnit" v-model="businessUnit">                  
+            </div>
 
-                <div class="form-group">
-                    <label for="startDate">Start date</label>
-                    <input type="text" class="form-control" id="startDate" v-model="startDate">                  
-                </div>
+            <div class="form-group">
+                <label for="startDate">Start date</label>
+                <input type="text" class="form-control" id="startDate" v-model="startDate">                  
+            </div>
 
-                <div class="form-group">
-                    <label for="endDate">End date</label>
-                    <input type="text" class="form-control" id="endDate" v-model="endDate">                  
-                </div>
+            <div class="form-group">
+                <label for="endDate">End date</label>
+                <input type="text" class="form-control" id="endDate" v-model="endDate">                  
+            </div>
 
-                <button class="btn btn-primary" @click="search">Search</button>
-            </form>
-
-        </div>
-        
+            <button class="btn btn-primary" @click="caca">Search</button>                
+            
+            <div class="container mt-5">                        
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Office</th>
+                        <th scope="col">Business Unit</th>
+                        <th scope="col">Start date</th>
+                        <th scope="col">End date</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="comision of comisiones"> 
+                            <th scope="row">{{comision['id']}}</th>
+                            <td>{{comision['office']}}</td>
+                            <td>{{comision['businessUnit']}}</td>
+                            <td>{{comision['startDate']}}</td>
+                            <td>{{comision['endDate']}}</td>                                                
+                        </tr>                   
+                    
+                    </tbody>
+                </table>
+            </div>     
+        </div> 
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        
-        <script src="comisiones.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>                
+        <script src="comisiones.js"></script>                    
 
     </body>
-
 </html>
