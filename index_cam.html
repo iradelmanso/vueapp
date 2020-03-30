@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body>
+        <div id="app">
+            <h3>{{title}}</h3>
+            <p>{{action}}</p>
+            <img style="-webkit-user-select: none;margin: auto;" src="http://192.168.1.73:8081/">
+            <div>
+                <button class="btn btn-primary" @click="rotateLeft">Rotate left</button>
+                <button class="btn btn-primary" @click="rotateRight">Rotate right</button>
+            </div>              
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script> 
+        <script src="cam.js"></script>
+    </body>
+
+</html>
